@@ -105,6 +105,9 @@ namespace lab3
             // Przypisanie tabeli danych do DataGridView
             bindingSource1.DataSource = dataTable;
             dataGridView1.DataSource = bindingSource1;
+            var lastRow = dataGridView1.Rows[dataGridView1.Rows.Count - 2];
+            var lastIDCELL=lastRow.Cells[0];
+            lastID = int.Parse((string)(lastIDCELL.Value));
         }
         private void odczyt_z_csv_Click(object sender, EventArgs e)
         {
